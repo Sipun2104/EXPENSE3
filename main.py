@@ -347,7 +347,7 @@ def add_expense():
         notify_flag = 1 if amount >= LARGE_EXPENSE_THRESHOLD else 0
         return redirect(url_for("dashboard", notify_large=notify_flag, amt=amount))
 
-    return render_template("add_expense.html", current_date=date.today().isoformat())
+    return render_template("add_expenses.html", current_date=date.today().isoformat())
 
 # ---------- Add Income ----------
 @app.route("/add_income", methods=["GET","POST"])
